@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="form.css">
+    <script src="./form.js"></script>
+
+    <title>Survey Form </title>
+</head>
+<body>
+    <div class="container ">
+        <header class="header">
+            <h1 id="title">
+                Survey Form for the Chatbot Providing Digital Health Assistance
+            </h1>
+            <p id="description">
+                We appreciate your dedication in contributing your time to assist us in enhancing the Medbot platform.            </p>
+        </header>
+        <form action="" id="survey-form">
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name">First Name</label>
+                <input type="text" name="firstname" id="firstname" class="formControl" placeholder="Enter your First Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Last Name</label>
+                <input type="text" name="lastname" id="lastname" class="formControl" placeholder="Enter your Last Name" required>
+            </div>
+            <!-- end of text section -->
+
+            <!-- Type Email section -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
+            </div>
+            <!-- end of Email section -->
+
+            <!-- Type Age section -->
+            <div class="form-group">
+                <label for="phone">Age</label>
+                <input type="number" name="age" id="age" class="formControl" placeholder="Enter your age" required>
+            </div>
+            <!-- end of Age section -->
+
+            <!-- select section -->
+            <div class="form-group">
+                <p id="quest">What is your current Role?
+                </p>
+                <select name="role" required id="dropdown" class="formControl">
+                    <option value disabled selected >Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="employed">Employed</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="retired">Retired</option>
+                </select>
+            </div>
+            <!-- end of select section -->
+
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest">How willing are you to seek online health assistance for your medical concerns?                </p>
+                <label for="">
+                    <input type="radio" name="source" value="Very willing"
+                    class="inputRadio"
+                    checked> Very willing
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="Somewhat willing"
+                    class="inputRadio"
+                    >Somewhat willing
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="neutral"
+                    class="inputRadio">
+                    Neutral                
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="Not very willing"
+                    class="inputRadio"
+                    > Not very willing
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="Not willing at all"
+                    class="inputRadio"
+                    > Not willing at all
+                </label>
+            </div>
+            <!-- end of radio button -->
+
+            <!-- Checkbox section -->
+            <div class="form-group">
+                <p id="quest">Why would you prefer a medical chatbot?</p>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="saving transportation cost"> Saving transportation cost
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="saving consultation fees"> Saving consultation fees
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="immediate responses">  Immediate responses
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="access to healthcare 24/7"> Access to healthcare advice 24/7
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="comfortable with technology"> I'm comfortable with technology and chat interfaces
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="convenience for minor issues"> Convenience for minor health issues
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="anonymity and privacy"> Anonymity and privacy
+                </label>
+            </div>
+            <!-- End of checkbox section -->
+
+            <!-- Textarea section -->
+            <div class="form-group">
+                <p id="quest">Can you name some medical websites or platforms you visit when you're not feeling well?</p>
+                <textarea name="feedback"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Enter your response here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn" onclick="handleSubmission()">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
